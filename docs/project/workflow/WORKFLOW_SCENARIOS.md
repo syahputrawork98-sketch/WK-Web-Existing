@@ -1,7 +1,7 @@
-# Workflow Scenarios — WPWK
+# Workflow Scenarios — WK
 
 ## Fungsi Dokumen
-Jelaskan bahwa dokumen ini berisi skenario cara memakai WPWK dalam berbagai kondisi project. Tujuannya agar Roomchat 00 tidak memaksakan satu alur yang kaku untuk semua project.
+Jelaskan bahwa dokumen ini berisi skenario cara memakai WK dalam berbagai kondisi project. Tujuannya agar Roomchat 00 tidak memaksakan satu alur yang kaku untuk semua project.
 
 ## Prinsip Utama
 - Pilih skenario berdasarkan kondisi project.
@@ -126,9 +126,9 @@ Jelaskan bahwa dokumen ini berisi skenario cara memakai WPWK dalam berbagai kond
   - jangan memakai review-heavy untuk pekerjaan kecil agar workflow tidak lambat.
 
 ## 10. Template-to-Project Adaptation Workflow
-- Digunakan saat WPWK di-clone atau dijadikan dasar project nyata. Workflow ini menggunakan `PROJECT_STARTER_CHECKLIST.md`.
+- Digunakan saat WK di-clone atau dijadikan dasar project nyata. Workflow ini menggunakan `PROJECT_STARTER_CHECKLIST.md`.
 - Alur:
-  1. Clone WPWK ke repo project baru.
+  1. Clone WK ke repo project baru.
   2. Ganti/adaptasi nama project.
   3. Adaptasi README.md.
   4. Adaptasi FEATURES.md.
@@ -137,15 +137,15 @@ Jelaskan bahwa dokumen ini berisi skenario cara memakai WPWK dalam berbagai kond
   7. Buat F01 untuk project nyata.
   8. Jangan membawa F00 sebagai fitur aplikasi.
 - Peringatan:
-  - README.md project turunan tidak boleh tetap hanya menjelaskan WPWK.
+  - README.md project turunan tidak boleh tetap hanya menjelaskan WK.
   - FEATURES.md project turunan harus menjadi fitur website/aplikasi nyata.
   - Jangan campur F00 workflow foundation dengan fitur aplikasi.
 
 ## 11. Existing Project Documentation Adoption Workflow
-- Digunakan saat WPWK diterapkan pada project yang sudah punya client/server matang tetapi docs berantakan. Workflow ini menggunakan `EXISTING_PROJECT_ADOPTION.md`.
+- Digunakan saat WK diterapkan pada project yang sudah punya client/server matang tetapi docs berantakan. Workflow ini menggunakan `EXISTING_PROJECT_ADOPTION.md`.
 - Jangan pakai Project Starter Checklist biasa tanpa audit existing.
 - Gunakan progressive adoption levels dari EXISTING_PROJECT_ADOPTION.md.
-- Jangan langsung memasukkan seluruh struktur WPWK.
+- Jangan langsung memasukkan seluruh struktur WK.
 - Untuk project existing, mulai dari Level 0 Read-only Pre-Scan atau Level 1 Minimal Control Layer.
 - Jika user meminta “rapikan semua”, pecah menjadi batch bertahap.
 - Alur detail ada di panduan existing adoption.

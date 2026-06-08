@@ -7,7 +7,6 @@ Isi checklist minimal:
 
 * Mode penggunaan
   * [x] Existing project / project sudah berjalan
-
 Untuk existing project:
   * [ ] Adoption level sudah dipilih
   * [ ] Level 0 read-only pre-scan sudah dilakukan jika project belum dipahami

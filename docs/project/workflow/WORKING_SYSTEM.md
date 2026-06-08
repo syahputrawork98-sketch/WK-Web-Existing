@@ -234,9 +234,7 @@ Aturan penamaan dan pemisahan fitur:
 * `SPECIALIST_ANALYSIS_TEMPLATE.md` digunakan saat analisa dilakukan di roomchat spesialis.
 
 ## Referensi Skenario Workflow
-Untuk menentukan alur kerja utama saat memulai, lihat file `START_HERE.md` di root repository. Tersedia dua mode:
-- **Greenfield Mode**: Untuk project baru, ikuti `docs/project/workflow/GREENFIELD_MODE.md`.
-- **Existing Project Mode**: Jika WK diterapkan pada project yang sudah berjalan, gunakan `docs/project/workflow/EXISTING_MODE.md`. Existing adoption harus dimulai dari audit/docs-only.
+- **Existing Project Mode**: Ikuti panduan di `docs/project/workflow/EXISTING_MODE.md`. Existing adoption harus dimulai dari audit/docs-only.
 
 Untuk memilih cara kerja spesifik seperti docs-first, client-first, server-first, prototype, production-safe, atau specialist analysis room, gunakan `docs/project/workflow/WORKFLOW_SCENARIOS.md`.
 WORKFLOW_SCENARIOS.md tidak menggantikan WORKING_SYSTEM.md, hanya menjadi playbook skenario.

@@ -1,4 +1,4 @@
-# Roomchat 00 Acceptance Template — WPWK
+# Roomchat 00 Acceptance Template — WK
 
 Fungsi:
 Template ini dipakai Roomchat 00 setelah menerima laporan dari Gemini Anti-Gravity atau eksekutor.

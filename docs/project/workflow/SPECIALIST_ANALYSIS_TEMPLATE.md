@@ -1,4 +1,4 @@
-# Specialist Analysis Template — WPWK
+# Specialist Analysis Template — WK
 
 Fungsi:
 Template ini digunakan oleh roomchat spesialis saat user membutuhkan analisa mendalam sebelum dikirim ke Roomchat 00.
