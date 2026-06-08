@@ -1,6 +1,6 @@
 # Working System
 
-Sistem kerja WPWK dirancang untuk keamanan, konsistensi, dan keteraturan.
+Sistem kerja WK dirancang untuk keamanan, konsistensi, dan keteraturan.
 
 ## Prinsip Utama
 1. **GitHub sebagai Source of Truth**.
@@ -55,7 +55,7 @@ Setiap batch dianggap selesai jika:
 
 ## Adaptasi Template dan Kedalaman Dokumentasi
 
-WPWK adalah template yang harus disesuaikan dengan kebutuhan project turunan. File seperti `README.md` dan `FEATURES.md` di project turunan wajib diubah untuk mencerminkan project nyata.
+WK adalah template yang harus disesuaikan dengan kebutuhan project turunan. File seperti `README.md` dan `FEATURES.md` di project turunan wajib diubah untuk mencerminkan project nyata.
 
 ### Aturan Adaptasi README.md
 README project turunan sebaiknya berisi:
@@ -229,14 +229,14 @@ Aturan penamaan dan pemisahan fitur:
 - Tidak membutuhkan keputusan baru dari user.
 
 ## Operational Templates
-* `PROJECT_STARTER_CHECKLIST.md` digunakan saat WPWK mulai dipakai untuk project nyata.
+* `PROJECT_STARTER_CHECKLIST.md` digunakan saat WK mulai dipakai untuk project nyata.
 * `ROOM_00_ACCEPTANCE_TEMPLATE.md` digunakan setelah Gemini selesai batch.
 * `SPECIALIST_ANALYSIS_TEMPLATE.md` digunakan saat analisa dilakukan di roomchat spesialis.
 
 ## Referensi Skenario Workflow
 Untuk menentukan alur kerja utama saat memulai, lihat file `START_HERE.md` di root repository. Tersedia dua mode:
 - **Greenfield Mode**: Untuk project baru, ikuti `docs/project/workflow/GREENFIELD_MODE.md`.
-- **Existing Project Mode**: Jika WPWK diterapkan pada project yang sudah berjalan, gunakan `docs/project/workflow/EXISTING_MODE.md`. Existing adoption harus dimulai dari audit/docs-only.
+- **Existing Project Mode**: Jika WK diterapkan pada project yang sudah berjalan, gunakan `docs/project/workflow/EXISTING_MODE.md`. Existing adoption harus dimulai dari audit/docs-only.
 
 Untuk memilih cara kerja spesifik seperti docs-first, client-first, server-first, prototype, production-safe, atau specialist analysis room, gunakan `docs/project/workflow/WORKFLOW_SCENARIOS.md`.
 WORKFLOW_SCENARIOS.md tidak menggantikan WORKING_SYSTEM.md, hanya menjadi playbook skenario.
@@ -245,3 +245,29 @@ WORKFLOW_SCENARIOS.md tidak menggantikan WORKING_SYSTEM.md, hanya menjadi playbo
 - Jangan menyimpan credential/secret di repository (gunakan file `.env.example` sebagai panduan).
 - Jangan men-generate kode ekstensif di luar scope instruksi.
 - Eksekutor dilarang melakukan `git commit` dan `git push`.
+
+## Model Execution Policy
+
+Default model untuk eksekusi Gemini di lingkungan ini adalah:
+- **Gemini 3.1 Pro low**
+- **Gemini 3.1 Pro high**
+
+**Aturan Pemakaian**:
+- **Gemini 3.1 Pro low** digunakan untuk batch ringan, dokumentasi kecil, review sederhana, update status, dan perubahan *low-risk*.
+- **Gemini 3.1 Pro high** digunakan untuk audit lebih dalam, analisis fitur, mapping frontend/backend/database, *refactor planning*, atau batch yang membutuhkan reasoning lebih kuat.
+
+Roomchat 00 harus memahami:
+- jika batch ringan dan cepat → rekomendasikan Gemini 3.1 Pro low;
+- jika batch audit/analisis kompleks → rekomendasikan Gemini 3.1 Pro high;
+- jika user ingin percepatan → Roomchat 00 boleh menyesuaikan rekomendasi model;
+- keputusan akhir model tetap mengikuti user.
+
+*Daftar model alternatif yang boleh disebut sebagai opsional (jika di-request eksplisit oleh User)*:
+- Claude Sonnet 4.6 thinking
+- Claude Opus 4.6 thinking
+- GPTOS 120B medium
+- Gemini 3.5 Flash low
+- Gemini 3.5 Flash medium
+- Gemini 3.5 Flash high
+
+Namun, default WK-Web-Existing tetap **Gemini 3.1 Pro low/high**.

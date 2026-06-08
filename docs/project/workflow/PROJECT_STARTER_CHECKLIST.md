@@ -1,18 +1,17 @@
-# Project Starter Checklist — WPWK
+# Project Starter Checklist — WK
 
 Fungsi:
-Dokumen ini digunakan saat WPWK dipakai sebagai template untuk project nyata atau project turunan.
+Dokumen ini digunakan saat WK dipakai sebagai template untuk project nyata atau project turunan.
 
 Isi checklist minimal:
 
 * Mode penggunaan
-  * [ ] Greenfield / project dari nol
-  * [ ] Existing project / project sudah berjalan
+  * [x] Existing project / project sudah berjalan
 
-Jika existing project:
+Untuk existing project:
   * [ ] Adoption level sudah dipilih
   * [ ] Level 0 read-only pre-scan sudah dilakukan jika project belum dipahami
-  * [ ] Tidak membuat banyak file WPWK sekaligus
+  * [ ] Tidak membuat banyak file WK sekaligus
   * [ ] Tidak menimpa README lama sebelum mapping
   * [ ] Tidak membuat folder client/server baru jika project existing sudah punya struktur sendiri
   * [ ] Tidak membuat banyak feature files sebelum inventory disetujui
@@ -34,7 +33,7 @@ Jika existing project:
 * Template adaptation
   * [ ] README.md sudah disesuaikan dengan project nyata
   * [ ] FEATURES.md sudah disesuaikan menjadi fitur website/aplikasi nyata
-  * [ ] Nama WPWK tidak tertinggal sebagai nama project nyata kecuali sebagai referensi template
+  * [ ] Nama WK tidak tertinggal sebagai nama project nyata kecuali sebagai referensi template
   * [ ] F00 tetap dipahami sebagai workflow foundation, bukan fitur aplikasi
 
 * Project type
