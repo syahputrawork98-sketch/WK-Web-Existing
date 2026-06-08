@@ -1,35 +1,27 @@
 # Database Documentation
 
-Folder ini akan berisi dokumentasi khusus terkait database, mencakup skema (schema), strategi migrasi, ERD, dan query penting.
+Fungsi folder `docs/database/` adalah sebagai peta teknis schema/data/model.
+Bukan tempat menulis ulang seluruh schema.
+Dokumentasi area tidak bertujuan menyalin ulang isi source code. Dokumentasi area hanya mencatat peta relasi fitur, lokasi file penting, status teknis, known gaps, dan next step. Source code tetap menjadi sumber kebenaran teknis terakhir.
 
-## Fungsi Dokumentasi Database
-Sebagai panduan struktur penyimpanan data, relasi antar entitas, dan kepemilikan data.
+Relasi fitur tetap berpusat di `docs/history/features/FXX`.
+Database docs mencatat schema, table/model, relation, migration, seed, ownership, dan relasi data ke fitur.
 
-## Apa Saja yang Harus Dicatat?
-Saat project mulai mendesain database, dokumentasi wajib memuat daftar tabel utama, relasinya, dan field yang mengontrol kepemilikan atau izin akses.
+Pada Existing (Discovery-First Documentation), database docs mencatat schema/model yang ditemukan dari aplikasi existing.
 
-## Aturan Pencatatan: Single Role Project
-- **Tabel Utama**: Tabel-tabel esensial untuk bisnis logic.
-- **Field Penting**: Kolom krusial yang perlu diperhatikan tipe datanya.
-- **Relasi Dasar**: Bagaimana tabel-tabel utama saling terhubung (1-N, M-N).
-- **Ownership Data**: (Jika ada) bagaimana data dikaitkan dengan user tertentu.
-
-## Aturan Pencatatan: Multi Role Project
-- **Users Table**: Struktur tabel yang menyimpan informasi dasar akun.
-- **Roles Table**: Struktur tabel jenis peran (jika terpisah dari tabel user).
-- **Permissions Table**: (Jika diperlukan) skema RBAC detail untuk izin spesifik.
-- **Relasi User-Role**: Bagaimana user dihubungkan ke rolenya.
-- **Ownership Field**: Kolom penting seperti `user_id`, `owner_id`, `created_by`, `updated_by` untuk membatasi akses edit/hapus.
-- **Data Access Rule Per Role**: Penjelasan tabel mana saja yang bisa diakses secara global vs terbatas sesuai kepemilikan.
-- **RBAC Sederhana vs Permission Detail**: Penjelasan sistem perizinan yang dipilih.
-
-## Template Ringkas
-```markdown
-### Tabel Utama
-- `users`: Data autentikasi
-- `products`: Data produk utama (`created_by` mengarah ke `users.id`)
-
-### Relasi Multi Role
-- `users.role` ENUM('admin', 'user')
-- Data akses: User hanya boleh melihat `products` milik mereka sendiri, Admin bisa melihat semua.
-```
+## Aturan Anti-Berantakan
+1. README.md hanya menjelaskan fungsi folder dan aturan penulisan.
+2. OVERVIEW.md hanya gambaran besar area.
+3. FEATURE_*_MAP.md hanya relasi fitur ke area teknis.
+4. MAP file harus berupa tabel/index singkat, bukan narasi panjang.
+5. Detail panjang masuk ke subfolder features/.
+6. File detail per fitur hanya dibuat jika fitur tersebut benar-benar punya relasi penting ke area itu.
+7. Jangan membuat file kosong untuk semua fitur.
+8. Jangan duplikasi isi docs/history/features/FXX ke frontend/backend/database.
+9. docs/history/features/FXX tetap pusat cerita fitur.
+10. docs/frontend, docs/backend, docs/database hanya peta teknis pendukung.
+11. CURRENT_STATUS.md hanya checkpoint terakhir.
+12. FEATURE_HISTORY.md hanya index fitur.
+13. Jika catatan teknis belum jelas, tulis Unknown atau Needs Review, jangan mengarang.
+14. Jika area tidak dibutuhkan fitur, tulis Not Required.
+15. Source code tetap sumber kebenaran teknis terakhir.

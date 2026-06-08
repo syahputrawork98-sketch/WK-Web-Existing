@@ -1,38 +1,26 @@
 # Frontend Documentation
 
-Folder ini akan berisi dokumentasi khusus terkait area frontend, mencakup arsitektur UI, state management, panduan gaya, dan komponen.
+Fungsi folder `docs/frontend/` adalah sebagai peta teknis UI.
+Dokumentasi area tidak bertujuan menyalin ulang isi source code. Dokumentasi area hanya mencatat peta relasi fitur, lokasi file penting, status teknis, known gaps, dan next step. Source code tetap menjadi sumber kebenaran teknis terakhir.
 
-## Fungsi Dokumentasi Frontend
-Dokumentasi ini berfungsi sebagai panduan arsitektur antarmuka dan batasan akses pengguna di sisi klien.
+Relasi fitur tetap berpusat di `docs/history/features/FXX`.
+Frontend docs hanya menjelaskan route, page, component, state, style, UI flow, dan relasi UI ke fitur.
 
-## Apa Saja yang Harus Dicatat?
-Saat project mulai mengimplementasikan frontend, dokumentasi ini wajib memuat arsitektur routing, pembagian komponen utama, state management yang dipilih, serta daftar halaman berdasarkan hak akses.
+Pada Existing (Discovery-First Documentation), frontend docs mencatat UI/API/Data yang ditemukan dari aplikasi existing.
 
-## Aturan Pencatatan: Single Role Project
-Jika project hanya memiliki satu jenis pengguna (misalnya: admin saja atau user publik saja), catat hal berikut:
-- **Role utama**: Siapa pengguna sistem ini.
-- **Public vs Protected Pages**: Halaman mana yang bisa diakses tanpa login dan mana yang wajib login.
-- **Route/Page Utama**: Daftar halaman utama beserta path-nya (misal `/dashboard`).
-- **Komponen Penting**: Komponen UI yang sering digunakan berulang.
-- **State/Data yang Digunakan**: Data utama yang disimpan di sisi klien (misal: data user yang sedang login, keranjang belanja).
-
-## Aturan Pencatatan: Multi Role Project
-Jika project memiliki beberapa tingkat hak akses (misal: admin, manajer, kasir, pelanggan), catat:
-- **Daftar Role**: Definisi peran yang ada.
-- **Matrix Akses Halaman**: Tabel yang menunjukkan role mana yang bisa mengakses halaman tertentu.
-- **Route Berdasarkan Role**: Struktur routing yang dilindungi oleh pengecekan hak akses.
-- **Perbedaan UI Per Role**: Penjelasan jika ada tombol, menu, atau fitur yang disembunyikan/dimunculkan untuk role tertentu.
-- **Halaman Protected**: Daftar rute yang diblokir bagi role yang tidak memiliki izin.
-- **Risiko Akses Frontend**: Peringatan bahwa perlindungan di frontend hanya untuk UX, dan validasi sejati tetap harus dilakukan di backend.
-
-## Template Ringkas
-```markdown
-### Arsitektur UI
-- Framework: ...
-- State Management: ...
-
-### Routing & Akses (Single/Multi Role)
-- `/login` (Public)
-- `/dashboard` (Protected - Admin)
-- `/profile` (Protected - User, Admin)
-```
+## Aturan Anti-Berantakan
+1. README.md hanya menjelaskan fungsi folder dan aturan penulisan.
+2. OVERVIEW.md hanya gambaran besar area.
+3. FEATURE_*_MAP.md hanya relasi fitur ke area teknis.
+4. MAP file harus berupa tabel/index singkat, bukan narasi panjang.
+5. Detail panjang masuk ke subfolder features/.
+6. File detail per fitur hanya dibuat jika fitur tersebut benar-benar punya relasi penting ke area itu.
+7. Jangan membuat file kosong untuk semua fitur.
+8. Jangan duplikasi isi docs/history/features/FXX ke frontend/backend/database.
+9. docs/history/features/FXX tetap pusat cerita fitur.
+10. docs/frontend, docs/backend, docs/database hanya peta teknis pendukung.
+11. CURRENT_STATUS.md hanya checkpoint terakhir.
+12. FEATURE_HISTORY.md hanya index fitur.
+13. Jika catatan teknis belum jelas, tulis Unknown atau Needs Review, jangan mengarang.
+14. Jika area tidak dibutuhkan fitur, tulis Not Required.
+15. Source code tetap sumber kebenaran teknis terakhir.

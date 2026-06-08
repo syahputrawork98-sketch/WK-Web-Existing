@@ -324,3 +324,11 @@ Mencatat cara menjalankan project dan kondisi teknis development. Menjawab:
 - masalah run local yang ditemukan.
 
 *(Catatan: Development docs bukan berarti technical fix boleh langsung dilakukan. Ini hanya catatan cara menjalankan project. Technical fix baru boleh dilakukan setelah status fitur dan risiko jelas).*
+
+## Area Documentation Structure
+- Docs area adalah navigation map, bukan source-code duplicate.
+- Struktur utama: overview + map + feature-specific detail.
+- Folder: `docs/frontend`, `docs/backend`, `docs/database`, `docs/development`.
+- Detail per fitur ada di subfolder `features/` jika diperlukan.
+- Source code tetap sumber kebenaran teknis terakhir.
+- Pada mode ini (Existing), menggunakan prinsip Discovery-First Documentation.

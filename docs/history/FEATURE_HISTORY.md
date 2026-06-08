@@ -11,3 +11,5 @@ Catatan:
 - F00 bukan fitur aplikasi user.
 - F00 bukan fitur frontend/backend/database.
 - F01 dan seterusnya dibuat setelah feature discovery pada project existing nyata.
+
+- [x] **F01** — Area Documentation Structure Standardization (Completed)

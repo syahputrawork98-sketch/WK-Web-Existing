@@ -30,3 +30,8 @@ F00 initialized as the zero point of the Existing adoption template.
 - Jangan menyimpan credential/secret di repository.
 - Jangan men-generate kode ekstensif di luar scope instruksi.
 - Eksekutor dilarang melakukan git commit dan git push.
+
+## Area Documentation Structure Checkpoint
+- Area documentation structure sudah distandarkan.
+- Docs frontend/backend/database/development sekarang memakai pola overview + map + feature-specific detail.
+- Next step adalah menggunakan struktur ini saat project nyata mulai dibangun/diaudit.

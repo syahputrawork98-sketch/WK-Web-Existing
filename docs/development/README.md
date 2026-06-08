@@ -1,12 +1,9 @@
-# Backend Documentation
+# Development Documentation
 
-Fungsi folder `docs/backend/` adalah sebagai peta teknis API/server/business logic.
-Dokumentasi area tidak bertujuan menyalin ulang isi source code. Dokumentasi area hanya mencatat peta relasi fitur, lokasi file penting, status teknis, known gaps, dan next step. Source code tetap menjadi sumber kebenaran teknis terakhir.
+Fungsi folder `docs/development/` adalah mencatat cara menjalankan project, command, env, dependency, debugging, dan known dev issues.
+Development docs bukan berarti technical fix boleh langsung dilakukan. Source code tetap sumber kebenaran.
 
-Relasi fitur tetap berpusat di `docs/history/features/FXX`.
-Backend docs mencatat endpoint, controller, service, middleware, auth, security, integrations, dan relasi API ke fitur.
-
-Pada Existing (Discovery-First Documentation), backend docs mencatat API/backend yang ditemukan dari aplikasi existing.
+Pada Existing (Discovery-First Documentation), development docs mencatat cara menjalankan project existing berdasarkan hasil discovery.
 
 ## Aturan Anti-Berantakan
 1. README.md hanya menjelaskan fungsi folder dan aturan penulisan.
