@@ -79,3 +79,10 @@ Untuk existing project:
   * [ ] Tidak ada kode dibuat tanpa batch gate
   * [ ] Tidak ada dependency diinstall tanpa konfirmasi user
   * [ ] Tidak ada delete/rename tanpa instruksi eksplisit
+
+* Discovery-First Documentation Checkpoints
+  * [ ] AI telah membaca aplikasi yang sudah ada sebelum mengubah area docs.
+  * [ ] Fitur ditemukan dan dicatat di `FEATURE_HISTORY.md` terlebih dahulu.
+  * [ ] Relasi Frontend/Backend/Database dicatat sebagai status (Found, Needs Review, Unknown, dll) di file `FXX.md`.
+  * [ ] Dokumentasi area (`docs/frontend`, `docs/backend`, dll) memetakan relasi teknis dari aplikasi lama, bukan memaksakan arsitektur baru.
+  * [ ] Technical fix HANYA dimulai setelah status fitur dan risiko jelas.

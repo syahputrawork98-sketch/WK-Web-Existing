@@ -271,3 +271,58 @@ Roomchat 00 harus memahami:
 - Gemini 3.5 Flash high
 
 Namun, default WK-Web-Existing tetap **Gemini 3.1 Pro low/high**.
+
+## Fungsi Dokumen Area (Discovery-First)
+
+WK-Web-Existing menggunakan pendekatan **Discovery-First Documentation**. Area docs mencatat apa yang ditemukan dari aplikasi lama, bukan memaksakan struktur baru.
+
+### 1. `CURRENT_STATUS.md`
+Berfungsi sebagai dashboard posisi kerja terakhir. Menjawab:
+- terakhir mengaudit sampai fitur apa?
+- fitur mana yang sudah ditemukan?
+- relasi frontend/backend/database mana yang sudah jelas?
+- next audit apa?
+
+### 2. `FEATURE_HISTORY.md`
+Berfungsi sebagai index semua fitur yang ditemukan dari aplikasi lama. Bukan tempat detail panjang, melainkan mengarah ke `docs/history/features/FXX`.
+
+### 3. `docs/history/features/FXX.md`
+Pusat detail tiap fitur. Menjawab:
+- fitur ini ditemukan di mana?
+- frontend-nya ada di file mana?
+- backend/API-nya ada di mana?
+- database-nya pakai table/model apa?
+- statusnya sudah jelas atau belum?
+- apa yang perlu dicek lagi?
+
+### 4. `docs/frontend/`
+Mencatat area frontend. Menjawab:
+- frontend aplikasi existing ada di mana?
+- fitur F01-FXX terhubung ke file frontend mana?
+- komponen mana yang mendukung fitur tertentu?
+- mana yang sudah Found, Needs Review, Unknown, atau Not Required?
+
+### 5. `docs/backend/`
+Mencatat area backend/API. Menjawab:
+- backend aplikasi existing ada di mana?
+- API mana yang mendukung fitur F01-FXX?
+- controller/service/middleware mana yang berhubungan?
+- mana yang Found, Needs Review, Unknown, atau Not Required?
+
+### 6. `docs/database/`
+Mencatat area database/data model. Menjawab:
+- database existing ada di mana?
+- model/table apa yang mendukung fitur F01-FXX?
+- relasi data sudah jelas atau belum?
+- database boleh diubah atau belum?
+- mana yang Found, Needs Review, Unknown, atau Not Required?
+
+### 7. `docs/development/`
+Mencatat cara menjalankan project dan kondisi teknis development. Menjawab:
+- cara menjalankan project existing;
+- package manager yang ditemukan;
+- scripts yang tersedia;
+- env yang ada/belum ada;
+- masalah run local yang ditemukan.
+
+*(Catatan: Development docs bukan berarti technical fix boleh langsung dilakukan. Ini hanya catatan cara menjalankan project. Technical fix baru boleh dilakukan setelah status fitur dan risiko jelas).*
