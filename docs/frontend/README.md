@@ -6,7 +6,7 @@ Dokumentasi area tidak bertujuan menyalin ulang isi source code. Dokumentasi are
 Relasi fitur tetap berpusat di `docs/history/features/FXX`.
 Frontend docs hanya menjelaskan route, page, component, state, style, UI flow, dan relasi UI ke fitur.
 
-Pada Existing (Discovery-First Documentation), frontend docs mencatat UI/API/Data yang ditemukan dari aplikasi existing.
+Pada Existing (Discovery-First Documentation), frontend docs mencatat UI/frontend yang ditemukan dari aplikasi existing.
 
 ## Aturan Anti-Berantakan
 1. README.md hanya menjelaskan fungsi folder dan aturan penulisan.
