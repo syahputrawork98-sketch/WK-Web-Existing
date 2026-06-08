@@ -6,13 +6,14 @@
 - Current Mode: Zero Point / Existing Adoption Initial State
 - Repository Status: Template Initialized
 - Primary Workspace: Anti-Gravity IDE
-- Default Executor Model: Gemini 3.1 Pro High
+- Default Executor Model: Gemini 3.5 Flash High
 
 ## Current Phase
 F00 — Existing Project Zero Point
 
 ## Last Checkpoint
 F00 initialized as the zero point of the Existing adoption template.
+- Model usage strategy updated: Gemini 3.5 Flash High is now the default executor model; Gemini 3.1 Pro is reserved for escalation, architecture, and high-risk reasoning.
 
 ## Active Feature Tracker
 
